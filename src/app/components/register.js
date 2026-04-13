@@ -1,45 +1,63 @@
+import {User} from "lucide-react";
+import Link from "next/link";
+
 export function Register() {
   return (
-    <div className="flex items-center justify-center bg-gray-200 rounded-2xl w-[500px] h-[600px] m-auto p-6 shadow-lg flex-col">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-teal-700 to-teal-900">
       
-      <div className="mb-4 w-full">
-        <p className="ml-4">Usuário</p>
-        <input 
-          type="text" 
-          placeholder="Digite seu nome por favor" 
-          className="m-3 p-2 rounded-2xl bg-gray-400 mt-3 w-full"
-        />
-      </div>
+      <div className="flex flex-col items-center w-[350px]">
 
-      <div className="mb-4 w-full">
-        <p className="ml-4">E-Mail</p>
-        <input 
-          type="text" 
-          placeholder="Digite seu email" 
-          className="m-3 p-2 rounded-2xl bg-gray-400 mt-3 w-full"
-        />
-      </div>
-      <div className="mb-4 w-full">
-        <p className="ml-4">Data de Nascimento</p>
-        <input 
-          type="date" 
-          placeholder="Digite seu email" 
-          className="m-3 p-2 rounded-2xl bg-gray-400 mt-3 w-full"
-        />
-      </div>
-      <div className="mb-4 w-full">
-        <p className="ml-4">Escolha uma senha</p>
-        <input 
-          type="password" 
-          placeholder="Digite sua senha" 
-          className="m-3 p-2 rounded-2xl bg-gray-400 mt-3 w-full"
-        />
-      </div>
-      
+        
+        <div className="mb-6">
+          <div className="w-28 h-28 rounded-full border border-white/30 flex items-center justify-center">
+  <User size={50} className="text-white" />
+</div>
+        </div>
+
     
-      <div className="flex justify-between w-full mt-6">
-        <button className="bg-green-200 rounded-2xl px-6 py-2 text-black font-semibold text-center w-1/2 hover:bg-green-300">Cadastrar</button>
-        <button className="bg-gray-300 rounded-2xl px-6 py-2 text-black font-semibold text-center w-1/2 hover:bg-gray-400">Cancelar</button>
+        <input
+          type="text"
+          placeholder="Usuário"
+          className="w-full p-3 mb-3 rounded-lg bg-gray-200 outline-none"
+        />
+
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full p-3 mb-3 rounded-lg bg-gray-200 outline-none"
+        />
+
+        <input
+          type="date"
+          className="w-full p-3 mb-3 rounded-lg bg-gray-200 outline-none text-gray-500"
+        />
+
+        <input
+          type="password"
+          placeholder="Senha"
+          className="w-full p-3 mb-4 rounded-lg bg-gray-200 outline-none"
+        />
+
+        <button className="w-full bg-blue-800 text-white font-semibold py-3 rounded-lg hover:bg-blue-900 transition">
+          Cadastrar
+        </button>
+
+  
+        <button className="w-full mt-3 bg-white/20 text-white font-medium py-2 rounded-lg hover:bg-white/30 transition">
+          Cancelar
+        </button>
+
+        <div className="flex items-center gap-2 mt-6 text-sm text-gray-300">
+          <span>Já tem uma conta?</span>
+
+          <Link 
+            href="/page_login"
+            className="text-blue-300 hover:text-blue-400 font-semibold transition"
+          >
+            Entre agora
+          </Link>
+        </div>
+
       </div>
     </div>
   );
