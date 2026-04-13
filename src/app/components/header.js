@@ -8,9 +8,9 @@ export function Header() {
     rounded-2xl px-6 py-3 flex items-center justify-between shadow-lg">
 
       
-      <h1 className="text-white text-lg font-semibold tracking-wide">
+      <Link href ="/"className="text-white text-lg font-semibold tracking-wide cursor-pointer">
         Meu App
-      </h1>
+      </Link>
 
       <nav className="flex items-center gap-6 text-white/80 font-medium">
         
